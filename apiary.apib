@@ -1,0 +1,38 @@
+FORMAT: 1A
+HOST: http://localhost:9393
+
+# api_with_contract
+
+## Version [/{version}]
+returns meta data about how the version works.
+
+### {version} [GET]
+
++ Response 200 (application/json)
+
+        {
+            info: "welcome! You're using V1 of the worst api ever!!",
+            endpoints: [
+                {
+                    slug: "/:version/sub",
+                    method: "get",
+                    params: "string",
+                    info: "removes vowls from a given string"
+                }
+            ]
+        }
+
+
+## Substitution [/{version}/sub{string}]
+Removes vowls from a given string.
+### sub [GET]
++ Parameters
+    + version (required, string, `v2`) ... The desired version of the api
+    + string (required, string, `test`) ... The string that you want to remove vowls from
+
++ Response 200 (application/json)
+
+        {
+         "t*st"
+        }
+
