@@ -11,13 +11,13 @@ returns meta data about how the version works.
 + Response 200 (application/json)
 
         {
-            info: "welcome! You're using V1 of the worst api ever!!",
-            endpoints: [
+            "info": "welcome! You're using V1 of the worst api ever!!",
+            "endpoints": [
                 {
-                    slug: "/:version/sub",
-                    method: "get",
-                    params: "string",
-                    info: "removes vowls from a given string"
+                    "slug": "/:version/sub",
+                    "method": "get",
+                    "params": "string",
+                    "info": "removes vowls from a given string"
                 }
             ]
         }
@@ -33,6 +33,6 @@ Removes vowls from a given string.
 + Response 200 (application/json)
 
         {
-         "t*st"
+         "result": "t*st"
         }
 
