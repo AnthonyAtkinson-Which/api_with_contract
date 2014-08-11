@@ -13,7 +13,7 @@ end
 
 get '/:version/sub' do
   raise "API version doesn't exist" unless params[:version][/v[12]/i]
-  { result:eval("#{params[:version].upcase}::Subber").klass.remove_vowls(params['string']) }.to_json
+  { result:eval("#{params[:version].upcase}::Subber").remove_vowls(params['string']) }.to_json
 end
 
 def latest_version
